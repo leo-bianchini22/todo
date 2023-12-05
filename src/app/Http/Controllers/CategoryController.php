@@ -20,7 +20,7 @@ class CategoryController extends Controller
         $category = $request->only(['name']);
         Category::create($category);
 
-        return redirect('/categories')->with('message', 'カテゴリーを作成しました');
+        return redirect('/categories')->with('message', 'カテゴリを作成しました');
     }
 
     public function update(CategoryRequest $request)
@@ -33,7 +33,7 @@ class CategoryController extends Controller
 
     public function destroy(Request $request)
     {
-        Category::find($request->id)->delete();
+        Category::find($request->category_id)->delete();
 
         return redirect('/categories')->with('message', 'カテゴリを削除しました');
     }
