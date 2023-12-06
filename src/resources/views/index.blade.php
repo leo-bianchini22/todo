@@ -32,7 +32,7 @@
             <input class="create-form__item-input" type="text" name="content" value="{{ old('content) }}">
             <select class="create-form__item-select" name="category_id">
                 @foreach ($categories as $category)
-                <option value="{{ $category['id'] }}">{{ $category['name'] }}</option>
+                <option value="{{ $category['id'] }}">{{ $category['name']} }</option>
                 @endforeach
             </select>
         </div>
